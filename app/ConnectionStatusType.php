@@ -76,6 +76,30 @@ class ConnectionStatusType
     }
 
     /**
+     * @return bool
+     */
+    public function isPending()
+    {
+        return $this->type === 'pending';
+    }
+
+    /**
+     * @return bool
+     */
+    public function isAccepted()
+    {
+        return $this->type === 'accepted';
+    }
+
+    /**
+     * @return bool
+     */
+    public function isRejected()
+    {
+        return $this->type === 'rejected';
+    }
+
+    /**
      * @return string
      */
     public function getName()
